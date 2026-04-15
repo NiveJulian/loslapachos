@@ -18,7 +18,7 @@ const serviceOptions = [
   { value: "otro", label: "Otro" },
 ]
 
-const WHATSAPP_NUMBER = "5437721234567" // Reemplazar con número real
+const WHATSAPP_NUMBER = "543772632717" // Reemplazar con número real
 
 export function WhatsAppContact() {
   const [formData, setFormData] = useState({
@@ -153,7 +153,7 @@ export function WhatsAppContact() {
                     <Input
                       id="phone"
                       type="tel"
-                      placeholder="+54 3772 12-3456"
+                      placeholder="+54 3772 63-2717"
                       value={formData.phone}
                       onChange={(e) => handleChange("phone", e.target.value)}
                       className="bg-background text-sm sm:text-base py-5"

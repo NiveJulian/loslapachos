@@ -40,8 +40,7 @@ export function About() {
               Un Acto de Amor y Respeto
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
-              Un nuevo espacio nace en Paso de los Libres, donde la memoria, la paz y el respeto 
-              se transforman en homenaje. En <strong className="text-foreground">Los Lapachos Crematorio y Jardín</strong>, 
+              Un nuevo espacio nace en Paso de los Libres. <strong className="text-foreground">¡Memoria, respeto y calidez! ¡Nuestro compromiso!</strong> En <strong className="text-foreground">Los Lapachos Crematorio y Jardín</strong>, 
               entendemos que cada despedida es única.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">

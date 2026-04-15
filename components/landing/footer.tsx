@@ -37,8 +37,8 @@ export function Footer() {
               />
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4 sm:mb-6 max-w-xs">
-              Un espacio en Paso de los Libres donde la memoria y el respeto 
-              se transforman en homenaje.
+              ¡Memoria, respeto y calidez! <br />
+              ¡Nuestro compromiso!
             </p>
             
             <div className="flex gap-3">
@@ -109,11 +109,11 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+5437721234567"
+                  href="tel:+543772632717"
                   className="flex items-start gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground/60 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-sm">+54 3772 12-3456</span>
+                  <span className="text-sm">+54 3772 63-2717</span>
                 </a>
               </li>
               <li>

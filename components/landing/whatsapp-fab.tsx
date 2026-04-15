@@ -2,7 +2,7 @@
 
 import { MessageCircle } from "lucide-react"
 
-const WHATSAPP_NUMBER = "5437721234567" // Reemplazar con número real de Los Lapachos
+const WHATSAPP_NUMBER = "543772632717" // Reemplazar con número real de Los Lapachos
 
 export function WhatsAppFab() {
   const defaultMessage = encodeURIComponent(

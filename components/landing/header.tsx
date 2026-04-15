@@ -99,7 +99,7 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex lg:items-center lg:gap-4">
           <a
-            href="tel:+5437721234567"
+            href="tel:+543772632717"
             className={`flex items-center gap-2 text-sm font-semibold transition-colors ${
               isScrolled 
                 ? "text-accent hover:text-accent/80" 
@@ -107,7 +107,7 @@ export function Header() {
             }`}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            <span className="hidden xl:inline">+54 3772 12-3456</span>
+            <span className="hidden xl:inline">+54 3772 63-2717</span>
             <span className="xl:hidden">Llamar</span>
           </a>
           <Button asChild size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground">
@@ -169,11 +169,11 @@ export function Header() {
 
           <div className="pt-4 border-t border-border mt-auto">
             <a
-              href="tel:+5437721234567"
+              href="tel:+543772632717"
               className="flex items-center gap-3 text-accent font-semibold py-3 px-4"
             >
               <Phone className="h-5 w-5" aria-hidden="true" />
-              <span>+54 3772 12-3456</span>
+              <span>+54 3772 63-2717</span>
             </a>
             
             <Button 

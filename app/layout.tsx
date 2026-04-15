@@ -14,12 +14,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Los Lapachos | Crematorio y Jardín en Paso de los Libres',
-  description: 'Crematorio Los Lapachos en Paso de los Libres, Corrientes. Un espacio donde la memoria, la paz y el respeto se transforman en homenaje. Servicios de cremación dignos y jardín memorial. Atención 24/7.',
+  title: 'Los Lapachos | ¡Memoria, respeto y calidez!',
+  description: 'Los Lapachos en Paso de los Libres, Corrientes. ¡Memoria, respeto y calidez! ¡Nuestro compromiso! Servicios de cremación dignos y jardín memorial. Atención 24/7.',
   keywords: 'crematorio Paso de los Libres, crematorio Corrientes, Los Lapachos crematorio, servicios funerarios Paso de los Libres, cremación Argentina, jardín memorial, servicios de cremación, crematorio cerca de mí',
   openGraph: {
     title: 'Los Lapachos | Crematorio y Jardín',
-    description: 'Un nuevo espacio en Paso de los Libres donde la memoria, la paz y el respeto se transforman en homenaje y un acto de amor.',
+    description: '¡Memoria, respeto y calidez! ¡Nuestro compromiso! Un nuevo espacio en Paso de los Libres donde el respeto se transforma en homenaje.',
     type: 'website',
     locale: 'es_AR',
   },

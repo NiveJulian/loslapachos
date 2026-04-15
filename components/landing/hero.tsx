@@ -66,7 +66,7 @@ export function Hero() {
             </div>
             
             <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white mb-4 sm:mb-6 text-balance leading-tight">
-              Donde la Memoria se Transforma en Homenaje
+              ¡Memoria, respeto y calidez! ¡Nuestro compromiso!
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 sm:mb-10 max-w-2xl mx-auto text-pretty leading-relaxed px-4">
