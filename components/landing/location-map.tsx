@@ -5,8 +5,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 const COORDINATES = {
-  lat: -29.7030431,
-  lng: -57.2108378,
+  lat: -29.7025157,
+  lng: -57.2105625,
 }
 
 const contactInfo = [
@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Teléfono",
-    content: "+54 3772 12-3456",
-    link: "tel:+5437721234567",
+    content: "+54 3772 63-2717",
+    link: "tel:+543772632717",
   },
   {
     icon: Mail,
@@ -36,7 +36,7 @@ const contactInfo = [
 
 export function LocationMap() {
   const mapsUrl = `https://www.google.com/maps?q=${COORDINATES.lat},${COORDINATES.lng}`
-  const embedUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3000!2d${COORDINATES.lng}!3d${COORDINATES.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDQyJzExLjAiUyA1N8KwMTInMzkuMCJX!5e0!3m2!1ses-419!2sar!4v1702000000000!5m2!1ses-419!2sar`
+  const embedUrl = `https://maps.google.com/maps?q=${COORDINATES.lat},${COORDINATES.lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`
 
   return (
     <section id="ubicacion" className="py-16 sm:py-20 lg:py-28 bg-muted" aria-labelledby="location-heading">
