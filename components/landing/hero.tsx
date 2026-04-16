@@ -1,18 +1,27 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { ChevronDown, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 2.0;
-    }
+    setMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (mounted && videoRef.current) {
+      videoRef.current.playbackRate = 2.0;
+
+      // Detect if it's a mobile/responsive view (e.g., < 768px)
+      const isMobile = window.innerWidth < 768;
+      videoRef.current.currentTime = isMobile ? 47 : 18;
+    }
+  }, [mounted]);
 
   return (
     <section
@@ -21,23 +30,28 @@ export function Hero() {
       aria-label="Presentación principal"
     >
       {/* Background Video */}
-      <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          className="w-full h-full object-cover scale-120"
-        >
-          <source src="/Drone_5_3.mp4" type="video/mp4" />
-          {/* Fallback image if video fails to load */}
-          <img
-            src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1920&q=80"
-            alt="Paisaje sereno"
-            className="w-full h-full object-cover"
-          />
-        </video>
+      <div className="absolute inset-0 z-0 bg-black overflow-hidden">
+        {mounted && (
+          <video
+            ref={videoRef}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute min-w-full min-h-full object-cover object-center opacity-0 transition-opacity duration-1000"
+            onCanPlay={() => {
+              if (videoRef.current) videoRef.current.style.opacity = "1";
+            }}
+          >
+            <source src="/Drone_5_3.mp4#t=18" type="video/mp4" />
+            {/* Fallback image if video fails to load */}
+            <img
+              src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1920&q=80"
+              alt="Paisaje sereno"
+              className="w-full h-full object-cover"
+            />
+          </video>
+        )}
       </div>
 
       {/* Overlay gradient - slightly darker for video contrast */}
