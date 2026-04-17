@@ -43,7 +43,7 @@ export function Hero() {
               if (videoRef.current) videoRef.current.style.opacity = "1";
             }}
           >
-            <source src="/Drone_5_3.mp4#t=18" type="video/mp4" />
+            <source src="/Drone_5_2.mp4" type="video/mp4" />
             {/* Fallback image if video fails to load */}
             <img
               src="https://images.unsplash.com/photo-1507692049790-de58290a4334?w=1920&q=80"
