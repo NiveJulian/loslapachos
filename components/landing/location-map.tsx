@@ -24,8 +24,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "contacto@loslapachos.com.ar",
-    link: "mailto:contacto@loslapachos.com.ar",
+    content: "loslapachos.crematorio@gmail.com",
+    link: "mailto:loslapachos.crematorio@gmail.com|",
   },
   {
     icon: Clock,
@@ -76,7 +76,7 @@ export function LocationMap() {
                 <h3 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-6">
                   Información de Contacto
                 </h3>
-                
+
                 <div className="space-y-4 sm:space-y-5 flex-1">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start gap-3 sm:gap-4">
@@ -86,7 +86,7 @@ export function LocationMap() {
                       <div className="min-w-0 flex-1">
                         <p className="text-xs sm:text-sm text-muted-foreground mb-0.5">{info.title}</p>
                         {info.link ? (
-                          <a 
+                          <a
                             href={info.link}
                             className="text-foreground font-medium hover:text-accent transition-colors text-sm sm:text-base break-words"
                           >

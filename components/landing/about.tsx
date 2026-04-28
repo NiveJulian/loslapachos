@@ -20,7 +20,7 @@ export function About() {
           <div className="relative order-2 lg:order-1">
             <div className="aspect-[4/3] sm:aspect-[16/10] lg:aspect-[4/3] overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=800&q=80"
+                src="/images/loslapachos.jpeg"
                 alt="Jardín memorial con flores"
                 className="w-full h-full object-cover"
               />
@@ -40,12 +40,12 @@ export function About() {
               Un Acto de Amor y Respeto
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
-              Un nuevo espacio nace en Paso de los Libres. <strong className="text-foreground">¡Memoria, respeto y calidez! ¡Nuestro compromiso!</strong> En <strong className="text-foreground">Los Lapachos Crematorio y Jardín</strong>, 
+              Un nuevo espacio nace en Paso de los Libres. <strong className="text-foreground">¡Memoria, respeto y calidez! ¡Nuestro compromiso!</strong> En <strong className="text-foreground">Los Lapachos Crematorio y Jardín</strong>,
               entendemos que cada despedida es única.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Nuestro equipo acompaña a las familias correntinas en cada paso, 
-              ofreciendo un espacio de paz rodeado de naturaleza, donde los lapachos 
+              Nuestro equipo acompaña a las familias correntinas en cada paso,
+              ofreciendo un espacio de paz rodeado de naturaleza, donde los lapachos
               simbolizan la belleza de los recuerdos que perduran.
             </p>
 
