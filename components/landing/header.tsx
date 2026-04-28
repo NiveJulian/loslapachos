@@ -9,10 +9,11 @@ import { AnimatedLogo } from "./animated-logo"
 
 const navigation = [
   { name: "Inicio", href: "#inicio" },
-  { name: "Servicios", href: "#servicios" },
-  { name: "Nosotros", href: "#nosotros" },
-  { name: "Ubicacion", href: "#ubicacion" },
-  { name: "Contacto", href: "#contacto" },
+  { name: "Nuestros Servicios", href: "#servicios" },
+  { name: "Sobre Nosotros", href: "#nosotros" },
+  { name: "Blog", href: "#blog" },
+  { name: "Dónde Estamos", href: "#ubicacion" },
+  { name: "Contactar Ahora", href: "#contacto" },
 ]
 
 export function Header() {

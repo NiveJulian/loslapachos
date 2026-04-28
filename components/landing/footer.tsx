@@ -3,18 +3,20 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react"
+import { SITE_NAME, CONTACT_PHONE, CONTACT_PHONE_RAW, CONTACT_EMAIL } from "@/lib/constants"
 
 const navigation = {
   services: [
-    { name: "Cremación Individual", href: "#servicios" },
-    { name: "Jardín Memorial", href: "#servicios" },
-    { name: "Velatorio y Ceremonias", href: "#servicios" },
-    { name: "Urnas y Relicarios", href: "#servicios" },
+    { name: "Servicio de Cremación", href: "#servicios" },
+    { name: "Jardín Memorial Corrientes", href: "#servicios" },
+    { name: "Salas de Velatorio", href: "#servicios" },
+    { name: "Urnas Funerarias", href: "#servicios" },
   ],
   company: [
-    { name: "Sobre Nosotros", href: "#nosotros" },
-    { name: "Ubicación", href: "#ubicacion" },
-    { name: "Contacto", href: "#contacto" },
+    { name: "Historia y Valores", href: "#nosotros" },
+    { name: "Novedades / Blog", href: "#blog" },
+    { name: "Mapa de Ubicación", href: "#ubicacion" },
+    { name: "Contacto Directo", href: "#contacto" },
   ],
 }
 
@@ -30,7 +32,7 @@ export function Footer() {
             <Link href="#inicio" className="inline-block mb-4 sm:mb-6">
               <Image
                 src="/images/logo-loslapachos.png"
-                alt="Los Lapachos - Crematorio y Jardín"
+                alt={`${SITE_NAME} - Crematorio y Jardín`}
                 width={160}
                 height={55}
                 className="h-12 sm:h-14 w-auto bg-white/95 rounded-lg p-2"
@@ -109,20 +111,20 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+543772632717"
+                  href={`tel:${CONTACT_PHONE_RAW}`}
                   className="flex items-start gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground/60 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-sm">+54 3772 63-2717</span>
+                  <span className="text-sm">{CONTACT_PHONE}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:contacto@loslapachos.com.ar"
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="flex items-start gap-3 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-primary-foreground/60 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  <span className="text-sm break-all">contacto@loslapachos.com.ar</span>
+                  <span className="text-sm break-all">{CONTACT_EMAIL}</span>
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -137,7 +139,7 @@ export function Footer() {
 
         <div className="mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-primary-foreground/10">
           <p className="text-xs sm:text-sm text-primary-foreground/60 text-center">
-            © {new Date().getFullYear()} Los Lapachos - Crematorio y Jardín. Paso de los Libres, Corrientes.
+            © {new Date().getFullYear()} {SITE_NAME} - Crematorio y Jardín. Paso de los Libres, Corrientes.
           </p>
         </div>
       </div>

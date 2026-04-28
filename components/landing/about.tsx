@@ -40,19 +40,17 @@ export function About() {
               Crematorio y Servicios Funerarios en Paso de los Libres
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
-              Un nuevo espacio nace en Paso de los Libres. <strong className="text-foreground">¡Memoria, respeto y calidez! ¡Nuestro compromiso!</strong> En <strong className="text-foreground">Los Lapachos Crematorio y Jardín</strong>,
-              entendemos que cada despedida es única.
+              En <strong className="text-foreground">Los Lapachos</strong>, nos dedicamos a brindar un servicio integral de <strong className="text-foreground">crematorio y velatorios</strong> con la mayor dignidad en la ciudad de <strong className="text-foreground">Paso de los Libres, Corrientes</strong>.
+              Ubicados estratégicamente sobre la <strong className="text-foreground">Ruta 14</strong>, a la <strong className="text-foreground">salida de Paso de los Libres</strong>, ofrecemos una <strong className="text-foreground">despedida digna</strong> y un <strong className="text-foreground">servicio respetuoso</strong> para honrar una vida con el amor que se merece.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Nuestro equipo acompaña a las familias correntinas en cada paso,
-              ofreciendo un espacio de paz rodeado de naturaleza, donde los lapachos
-              simbolizan la belleza de los recuerdos que perduran.
+              Contamos con instalaciones de última generación para <strong className="text-foreground">servicios de cremación rápida e inmediata</strong>, siendo un <strong className="text-foreground">crematorio habilitado en Ruta 14</strong> que cumple con las más estrictas normativas. Nuestro compromiso es brindar una <strong className="text-foreground">despedida con respeto</strong> y calidez humana en cada paso del proceso.
             </p>
 
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4" role="list">
               {features.map((feature, index) => (
-                <li key={index} className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" aria-hidden="true" />
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" aria-hidden="true" />
                   <span className="text-foreground text-sm sm:text-base">{feature}</span>
                 </li>
               ))}

@@ -5,33 +5,33 @@ import { Flame, Heart, Package, Clock, Trees, FileText } from "lucide-react"
 const services = [
   {
     icon: Flame,
-    title: "Cremación Individual",
-    description: "Proceso con total respeto y dignidad, garantizando que los restos sean exclusivamente de su ser querido.",
+    title: "Cremación de Personas",
+    description: "Servicio de cremación de personas con total transparencia y dignidad. Garantizamos un proceso individual y respetuoso en nuestras modernas instalaciones de Paso de los Libres.",
   },
   {
     icon: Trees,
-    title: "Jardín Memorial",
-    description: "Un hermoso espacio verde donde depositar las cenizas o simplemente visitar y recordar.",
+    title: "Jardín Memorial Corrientes",
+    description: "Un espacio de paz y naturaleza en el litoral para el descanso eterno. Nuestro jardín memorial permite un homenaje natural y sereno rodeado de vegetación cuidada.",
   },
   {
     icon: Heart,
-    title: "Velatorio y Ceremonias",
-    description: "Espacios acogedores para despedirse con tranquilidad. Ceremonias personalizadas.",
+    title: "Servicio Funerario Cremación",
+    description: "Salas de velatorio diseñadas para brindar comodidad. Organizamos un servicio funerario de cremación completo que celebra la vida con respeto y calidez.",
   },
   {
     icon: Package,
     title: "Urnas y Relicarios",
-    description: "Amplia selección de urnas de diferentes materiales, desde clásicas hasta biodegradables.",
+    description: "Contamos con un amplio catálogo de urnas funerarias de diversos materiales y diseños, desde opciones clásicas hasta ecológicas y biodegradables para nuestro jardín memorial.",
   },
   {
     icon: Clock,
-    title: "Atención 24 Horas",
-    description: "Disponibilidad total las 24 horas, los 365 días del año. Siempre presentes.",
+    title: "Atención Funeraria 24h",
+    description: "Estamos a su disposición las 24 horas del día, todos los días del año. Nuestro equipo de guardia en Paso de los Libres ofrece respuesta inmediata ante cualquier necesidad o consulta urgente.",
   },
   {
     icon: FileText,
-    title: "Trámites Legales",
-    description: "Nos encargamos de toda la documentación y trámites necesarios.",
+    title: "Asesoramiento en Trámites",
+    description: "Simplificamos los momentos difíciles encargándonos de toda la gestión administrativa y trámites legales necesarios para los servicios de cremación y sepelio, brindando tranquilidad a la familia.",
   },
 ]
 

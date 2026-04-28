@@ -4,6 +4,8 @@ import { MapPin, Phone, Mail, Clock, Navigation } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
+import { CONTACT_PHONE, CONTACT_PHONE_RAW, CONTACT_EMAIL } from "@/lib/constants"
+
 const COORDINATES = {
   lat: -29.7025157,
   lng: -57.2105625,
@@ -18,14 +20,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Teléfono",
-    content: "+54 3772 63-2717",
-    link: "tel:+543772632717",
+    content: CONTACT_PHONE,
+    link: `tel:${CONTACT_PHONE_RAW}`,
   },
   {
     icon: Mail,
     title: "Email",
-    content: "loslapachos.crematorio@gmail.com",
-    link: "mailto:loslapachos.crematorio@gmail.com|",
+    content: CONTACT_EMAIL,
+    link: `mailto:${CONTACT_EMAIL}`,
   },
   {
     icon: Clock,

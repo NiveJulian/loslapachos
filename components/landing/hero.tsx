@@ -64,6 +64,11 @@ export function Hero() {
           Los Lapachos | Crematorio, Velatorios y Jardín Memorial en Paso de los Libres, Corrientes
         </h1>
 
+        <div className="sr-only">
+          Ofrecemos servicios funerarios integrales, cremación digna y un espacio de paz en nuestro Jardín Memorial. 
+          Atención personalizada las 24 horas en Corrientes, Argentina.
+        </div>
+
         {/* Minimalist Center */}
         <div className="flex-1" />
 
