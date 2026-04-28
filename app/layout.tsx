@@ -14,27 +14,69 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Los Lapachos | ¡Memoria, respeto y calidez!",
+  title: {
+    default: "Los Lapachos | Crematorio, Velatorios y Jardín Memorial",
+    template: "%s | Los Lapachos"
+  },
   description:
-    "Los Lapachos en Paso de los Libres, Corrientes. ¡Memoria, respeto y calidez! ¡Nuestro compromiso! Servicios de cremación dignos y jardín memorial. Atención 24/7.",
-  keywords:
-    "crematorio Paso de los Libres, crematorio Corrientes, Los Lapachos crematorio, servicios funerarios Paso de los Libres, cremación Argentina, jardín memorial, servicios de cremación, crematorio cerca de mí",
+    "Los Lapachos: El principal centro de servicios funerarios y crematorio en Paso de los Libres, Corrientes. Ofrecemos velatorios con dignidad, cremación individual y un jardín memorial único. Atención 24/7 con el respeto que su familia merece.",
+  keywords: [
+    "crematorio Paso de los Libres",
+    "velatorios Paso de los Libres",
+    "servicios funerarios Corrientes",
+    "cremación Corrientes",
+    "jardín memorial Argentina",
+    "cochería Paso de los Libres",
+    "tanatorio Corrientes",
+    "pompas fúnebres",
+    "servicios de cremación dignos",
+    "atención funeraria 24 horas"
+  ],
+  authors: [{ name: "Los Lapachos" }],
+  creator: "Los Lapachos",
+  publisher: "Los Lapachos",
+  formatDetection: {
+    email: false,
+    address: true,
+    telephone: true,
+  },
   openGraph: {
-    title: "Los Lapachos | Crematorio y Jardín",
+    title: "Los Lapachos | Crematorio, Velatorios y Jardín Memorial",
     description:
-      "¡Memoria, respeto y calidez! ¡Nuestro compromiso! Un nuevo espacio en Paso de los Libres donde el respeto se transforma en homenaje.",
-    type: "website",
+      "¡Memoria, respeto y calidez! El principal centro de servicios funerarios y cremación en Paso de los Libres, Corrientes.",
+    url: "https://loslapachos.com.ar", // Reemplazar con la URL real si es diferente
+    siteName: "Los Lapachos",
     locale: "es_AR",
+    type: "website",
+    images: [
+      {
+        url: "/images/loslapachos.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Los Lapachos Crematorio y Jardín Memorial",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Los Lapachos - Crematorio y Jardín",
+    title: "Los Lapachos | Crematorio y Velatorios",
     description:
-      "Crematorio y jardín memorial en Paso de los Libres, Corrientes. Servicios de cremación con dignidad y respeto.",
+      "Servicios de cremación y jardín memorial con dignidad en Paso de los Libres, Corrientes. Atención 24/7.",
+    images: ["/images/loslapachos.jpeg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: "https://loslapachos.com.ar",
   },
   icons: {
     icon: [
@@ -72,6 +114,51 @@ export default function RootLayout({
       className={`${playfair.variable} ${inter.variable} bg-background`}
     >
       <body className="font-sans antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FuneralService",
+              "name": "Los Lapachos | Crematorio y Jardín Memorial",
+              "image": "https://loslapachos.com.ar/images/loslapachos.jpeg",
+              "@id": "https://loslapachos.com.ar",
+              "url": "https://loslapachos.com.ar",
+              "telephone": "+543772632717",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Paso de los Libres",
+                "addressLocality": "Paso de los Libres",
+                "addressRegion": "Corrientes",
+                "postalCode": "3230",
+                "addressCountry": "AR"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": -29.7025157,
+                "longitude": -57.2105625
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              },
+              "sameAs": [
+                "https://www.facebook.com/loslapachos", // Ejemplo, ajustar si existen
+                "https://www.instagram.com/loslapachos"
+              ]
+            })
+          }}
+        />
         {children}
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

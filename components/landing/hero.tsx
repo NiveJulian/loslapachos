@@ -61,7 +61,7 @@ export function Hero() {
       <div className="relative z-10 flex flex-col min-h-[100svh]">
         {/* Hidden SEO Heading */}
         <h1 className="sr-only">
-          ¡Memoria, respeto y calidez! ¡Nuestro compromiso!
+          Los Lapachos | Crematorio, Velatorios y Jardín Memorial en Paso de los Libres, Corrientes
         </h1>
 
         {/* Minimalist Center */}

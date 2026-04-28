@@ -37,7 +37,7 @@ export function About() {
               Sobre Nosotros
             </span>
             <h2 id="about-heading" className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-4 sm:mb-6 text-balance leading-tight">
-              Un Acto de Amor y Respeto
+              Crematorio y Servicios Funerarios en Paso de los Libres
             </h2>
             <p className="text-muted-foreground text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed">
               Un nuevo espacio nace en Paso de los Libres. <strong className="text-foreground">¡Memoria, respeto y calidez! ¡Nuestro compromiso!</strong> En <strong className="text-foreground">Los Lapachos Crematorio y Jardín</strong>,
