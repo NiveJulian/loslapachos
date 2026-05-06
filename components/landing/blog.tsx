@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { Calendar, ArrowRight } from "lucide-react"
+import { Calendar } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
@@ -99,13 +99,9 @@ export function Blog() {
                         <h3 className="font-serif text-xl sm:text-2xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors leading-tight">
                           {post.title}
                         </h3>
-                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-4 line-clamp-3">
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed line-clamp-3">
                           {post.excerpt}
                         </p>
-                        <div className="mt-auto flex items-center gap-2 text-accent font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                          <span>Leer más</span>
-                          <ArrowRight className="h-4 w-4" />
-                        </div>
                       </div>
                     </CardContent>
                   </Card>

@@ -61,16 +61,22 @@ export function Hero() {
       <div className="relative z-10 flex flex-col min-h-[100svh]">
         {/* Hidden SEO Heading */}
         <h1 className="sr-only">
-          Los Lapachos | Crematorio, Velatorios y Jardín Memorial en Paso de los Libres, Corrientes
+          Los Lapachos | Memoria, Respeto y Calidez | Crematorio y Servicios Funerarios en Paso de los Libres
         </h1>
 
         <div className="sr-only">
           Ofrecemos servicios funerarios integrales, cremación digna y un espacio de paz en nuestro Jardín Memorial. 
-          Atención personalizada las 24 horas en Corrientes, Argentina.
+          Atención personalizada las 24 horas con el respeto y la calidez que nos caracteriza.
         </div>
 
         {/* Minimalist Center */}
-        <div className="flex-1" />
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center px-4">
+            <p className="text-white/90 text-xl sm:text-2xl lg:text-3xl font-serif italic animate-in fade-in slide-in-from-bottom-4 duration-1000 fill-mode-both">
+              "Memoria, respeto y calidez"
+            </p>
+          </div>
+        </div>
 
         {/* Bottom content with floating buttons */}
         <div className="pb-4 sm:pb-10 px-4 sm:px-6">

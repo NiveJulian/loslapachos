@@ -1,37 +1,43 @@
 "use client"
 
-import { Flame, Heart, Package, Clock, Trees, FileText } from "lucide-react"
+import { Flame, Clock, Trees, FileText, Truck, Building2, SquareParking } from "lucide-react"
+import { cn } from "@/lib/utils"
 
 const services = [
   {
-    icon: Flame,
-    title: "Cremación de Personas",
-    description: "Servicio de cremación de personas con total transparencia y dignidad. Garantizamos un proceso individual y respetuoso en nuestras modernas instalaciones de Paso de los Libres.",
-  },
-  {
-    icon: Trees,
-    title: "Jardín Memorial Corrientes",
-    description: "Un espacio de paz y naturaleza en el litoral para el descanso eterno. Nuestro jardín memorial permite un homenaje natural y sereno rodeado de vegetación cuidada.",
-  },
-  {
-    icon: Heart,
-    title: "Servicio Funerario Cremación",
-    description: "Salas de velatorio diseñadas para brindar comodidad. Organizamos un servicio funerario de cremación completo que celebra la vida con respeto y calidez.",
-  },
-  {
-    icon: Package,
-    title: "Urnas y Relicarios",
-    description: "Contamos con un amplio catálogo de urnas funerarias de diversos materiales y diseños, desde opciones clásicas hasta ecológicas y biodegradables para nuestro jardín memorial.",
-  },
-  {
     icon: Clock,
-    title: "Atención Funeraria 24h",
-    description: "Estamos a su disposición las 24 horas del día, todos los días del año. Nuestro equipo de guardia en Paso de los Libres ofrece respuesta inmediata ante cualquier necesidad o consulta urgente.",
+    title: "Atención las 24hs",
+    description: "Estamos a su disposición todos los días del año, brindando respuesta inmediata ante cualquier necesidad.",
   },
   {
     icon: FileText,
-    title: "Asesoramiento en Trámites",
-    description: "Simplificamos los momentos difíciles encargándonos de toda la gestión administrativa y trámites legales necesarios para los servicios de cremación y sepelio, brindando tranquilidad a la familia.",
+    title: "Asesoramiento y Trámites",
+    description: "Gestión integral de trámites administrativos y legales, encargándonos de todo para su tranquilidad.",
+  },
+  {
+    icon: Truck,
+    title: "Servicio de Traslado",
+    description: "Contamos con unidades propias para realizar traslados con total seguridad, profesionalismo y respeto.",
+  },
+  {
+    icon: Building2,
+    title: "Salas de Velatorio",
+    description: "Exequias y honras fúnebres en modernas salas diseñadas para brindar la mayor comodidad y paz.",
+  },
+  {
+    icon: Flame,
+    title: "Cremaciones Propias",
+    description: "Contamos con equipos de última generación con los mejores estándares en cuidado del medio ambiente y calidad.",
+  },
+  {
+    icon: Trees,
+    title: "Jardín y Columbarios",
+    description: "Jardín columbario y parcelas particulares en un entorno de paz y serenidad para el descanso eterno.",
+  },
+  {
+    icon: SquareParking,
+    title: "Estacionamiento",
+    description: "Disponemos de amplio estacionamiento en nuestras instalaciones para la comodidad de los familiares.",
   },
 ]
 
@@ -41,22 +47,24 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 sm:mb-16">
           <span className="inline-block text-accent font-medium text-sm mb-3 tracking-wide uppercase">
-            Servicios
+            Memoria, respeto y calidez
           </span>
           <h2 id="services-heading" className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-foreground mb-4 text-balance">
-            Lo que Ofrecemos
+            ¡Nuestro Compromiso!
           </h2>
           <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto text-pretty">
-            Servicios integrales de cremación y jardín memorial con el máximo respeto, 
-            adaptándonos a cada familia.
+            Contamos con servicios integrales diseñados para acompañar a las familias con la excelencia que nos caracteriza.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-12 sm:mb-16">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="group p-5 sm:p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300"
+              className={cn(
+                "group p-5 sm:p-6 lg:p-8 rounded-2xl bg-card border border-border hover:border-accent/30 hover:shadow-lg transition-all duration-300",
+                index === 6 && "sm:col-span-2 lg:col-span-1 lg:col-start-2 sm:max-w-md lg:max-w-none sm:mx-auto lg:mx-0"
+              )}
             >
               <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-accent/15 flex items-center justify-center mb-4 sm:mb-5 group-hover:bg-accent/25 transition-colors">
                 <service.icon className="h-6 w-6 sm:h-7 sm:w-7 text-accent" aria-hidden="true" />
@@ -69,6 +77,13 @@ export function Services() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="text-center max-w-3xl mx-auto">
+          <p className="text-foreground text-lg sm:text-xl font-medium leading-relaxed italic">
+            "Todos y cada uno de estos servicios los brindamos con la empatía y responsabilidad que nos caracterizan. 
+            Honrando y homenajeando a quien despedimos, y acompañando a sus seres queridos."
+          </p>
         </div>
       </div>
     </section>
