@@ -27,7 +27,7 @@ const services = [
   {
     icon: Flame,
     title: "Cremaciones Propias",
-    description: "Crematorio propio de última generación con altos estándares ambientales.",
+    description: "Cremación en nuestras instalaciones, donde contamos con equipos de última generación cuidando nuestro medio ambiente.",
   },
   {
     icon: Trees,
