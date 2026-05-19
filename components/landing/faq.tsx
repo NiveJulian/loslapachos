@@ -10,35 +10,35 @@ import {
 const faqs = [
   {
     question: "¿En qué consiste el servicio de cremación individual?",
-    answer: "La cremación individual es un proceso digno y transparente donde garantizamos que el procedimiento se realice de manera exclusiva para su ser querido. En nuestras instalaciones de Paso de los Libres, Corrientes, cumplimos con los más altos estándares de calidad y ética, asegurando que las cenizas entregadas correspondan íntegramente a la persona homenajeada.",
+    answer: "Es un proceso exclusivo y garantizado para una sola persona, asegurando total transparencia y la entrega íntegra de las cenizas correspondientes.",
   },
   {
     question: "¿Qué es un Jardín Memorial?",
-    answer: "Un Jardín Memorial es un espacio sagrado y natural diseñado para el descanso eterno y el recuerdo. A diferencia de un cementerio tradicional, nuestro jardín en Los Lapachos ofrece un entorno sereno rodeado de naturaleza, donde las familias pueden visitar a sus seres queridos en un ambiente de paz y armonía, simbolizado por la belleza de los árboles lapachos.",
+    answer: "Es un cementerio parque natural diseñado como un espacio de paz y serenidad para el descanso y el homenaje a los seres queridos.",
   },
   {
     question: "¿Ofrecen servicios de velatorio las 24 horas?",
-    answer: "Sí, en Los Lapachos entendemos que la necesidad de apoyo puede surgir en cualquier momento. Por eso, ofrecemos atención funeraria y salas de velatorio las 24 horas, los 365 días del año. Nuestro equipo está siempre preparado para brindar contención y profesionalismo en Paso de los Libres.",
+    answer: "Sí, disponemos de salas de velatorio y atención de guardia permanente las 24 horas, los 365 días del año.",
   },
   {
     question: "¿Qué trámites legales debo realizar?",
-    answer: "Ante el fallecimiento de un ser querido, existen diversos trámites administrativos y legales que deben cumplirse. En Los Lapachos, ofrecemos asesoramiento integral y nos encargamos de gestionar la documentación necesaria ante el registro civil y otras autoridades, permitiendo que la familia pueda enfocarse en su proceso de duelo.",
+    answer: "Nos encargamos de toda la gestión administrativa y los trámites legales necesarios ante el Registro Civil y las autoridades correspondientes.",
   },
   {
     question: "¿Tienen opciones de urnas ecológicas?",
-    answer: "Sí, estamos comprometidos con el cuidado del medio ambiente. Disponemos de una línea de urnas biodegradables diseñadas específicamente para ser integradas en nuestro jardín memorial, permitiendo que el ciclo de la vida continúe de manera natural y respetuosa.",
+    answer: "Sí, contamos con urnas biodegradables diseñadas para integrarse de forma natural en nuestro jardín memorial.",
   },
   {
-    question: "¿Cuál es el precio de una cremación en Argentina y qué incluye?",
-    answer: "Si desea saber cuánto cuesta una cremación, en Los Lapachos ofrecemos precios transparentes y competitivos. El servicio incluye la cremación individual, urna básica y el asesoramiento necesario. Para obtener un presupuesto detallado según sus necesidades, puede ponerse en contacto con nuestro equipo de atención 24 horas.",
+    question: "¿Cuál es el precio de una cremación y qué incluye?",
+    answer: "El costo varía según el servicio requerido. Incluye la cremación individual, la urna básica y el asesoramiento administrativo. Contáctenos para un presupuesto detallado.",
   },
   {
     question: "¿Ofrecen servicio de cremación inmediato ante una urgencia?",
-    answer: "Sí, brindamos un servicio de cremación rápido y respetuoso para casos de necesidad inmediata. Como crematorio habilitado en Ruta 14 con atención 24 horas, estamos preparados para actuar con la mayor celeridad, asegurando una despedida digna y el acompañamiento familiar necesario en todo momento.",
+    answer: "Sí, coordinamos el traslado y el servicio de cremación de forma inmediata en cualquier momento del día o la noche.",
   },
   {
-    question: "¿Dónde cremar un familiar en Paso de los Libres de manera segura?",
-    answer: "Los Lapachos es el centro de referencia en el litoral para servicios funerarios. Ubicados a la salida de Paso de los Libres, nuestro crematorio ofrece instalaciones modernas y habilitadas que garantizan un proceso seguro, transparente y con total contención a las familias.",
+    question: "¿Dónde realizar una cremación segura en Paso de los Libres?",
+    answer: "En nuestras instalaciones propias y habilitadas ubicadas sobre la Ruta Nacional 14, Paso de los Libres, Corrientes.",
   },
 ]
 

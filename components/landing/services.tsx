@@ -7,37 +7,37 @@ const services = [
   {
     icon: Clock,
     title: "Atención las 24hs",
-    description: "Estamos a su disposición todos los días del año, brindando respuesta inmediata ante cualquier necesidad.",
+    description: "Guardia activa permanente todos los días del año con respuesta inmediata.",
   },
   {
     icon: FileText,
     title: "Asesoramiento y Trámites",
-    description: "Gestión integral de trámites administrativos y legales, encargándonos de todo para su tranquilidad.",
+    description: "Gestión y tramitación administrativa completa ante los organismos correspondientes.",
   },
   {
     icon: Truck,
     title: "Servicio de Traslado",
-    description: "Contamos con unidades propias para realizar traslados con total seguridad, profesionalismo y respeto.",
+    description: "Traslados con unidades propias equipadas para garantizar total seguridad y respeto.",
   },
   {
     icon: Building2,
     title: "Salas de Velatorio",
-    description: "Exequias y honras fúnebres en modernas salas diseñadas para brindar la mayor comodidad y paz.",
+    description: "Salas modernas acondicionadas para brindar la mayor comodidad y privacidad.",
   },
   {
     icon: Flame,
     title: "Cremaciones Propias",
-    description: "Contamos con equipos de última generación con los mejores estándares en cuidado del medio ambiente y calidad.",
+    description: "Crematorio propio de última generación con altos estándares ambientales.",
   },
   {
     icon: Trees,
     title: "Jardín y Columbarios",
-    description: "Jardín columbario y parcelas particulares en un entorno de paz y serenidad para el descanso eterno.",
+    description: "Espacios de sepultura y columbarios en un entorno natural y de paz.",
   },
   {
     icon: SquareParking,
     title: "Estacionamiento",
-    description: "Disponemos de amplio estacionamiento en nuestras instalaciones para la comodidad de los familiares.",
+    description: "Sector exclusivo dentro de las instalaciones para comodidad de las familias.",
   },
 ]
 
