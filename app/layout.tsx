@@ -110,6 +110,7 @@ export default function RootLayout({
                 "@id": SITE_URL,
                 "url": SITE_URL,
                 "telephone": CONTACT_PHONE_RAW,
+                "priceRange": "$$",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": SITE_ADDRESS.street,
@@ -123,6 +124,16 @@ export default function RootLayout({
                   "latitude": SITE_COORDINATES.lat,
                   "longitude": SITE_COORDINATES.lng
                 },
+                "areaServed": [
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Paso de los Libres"
+                  },
+                  {
+                    "@type": "AdministrativeArea",
+                    "name": "Corrientes"
+                  }
+                ],
                 "openingHoursSpecification": {
                   "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
@@ -130,6 +141,72 @@ export default function RootLayout({
                   ],
                   "opens": "00:00",
                   "closes": "23:59"
+                },
+                "sameAs": [
+                  "https://facebook.com",
+                  "https://instagram.com"
+                ],
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Servicios Funerarios y de Cremación",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Atención las 24hs",
+                        "description": "Guardia activa permanente todos los días del año con respuesta inmediata ante cualquier necesidad."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Asesoramiento y Trámites",
+                        "description": "Gestión y tramitación administrativa completa ante los organismos correspondientes."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Servicio de Traslado",
+                        "description": "Traslados con unidades propias equipadas para garantizar total seguridad y respeto."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Salas de Velatorio",
+                        "description": "Salas modernas acondicionadas para brindar la mayor comodidad y privacidad."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cremaciones Propias",
+                        "description": "Cremación en nuestras instalaciones, donde contamos con equipos de última generación cuidando nuestro medio ambiente."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Jardín y Columbarios",
+                        "description": "Espacios de sepultura y columbarios en un entorno natural y de paz."
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Estacionamiento",
+                        "description": "Sector exclusivo dentro de las instalaciones para comodidad de las familias."
+                      }
+                    }
+                  ]
                 }
               },
               {
@@ -140,6 +217,7 @@ export default function RootLayout({
                 "@id": `${SITE_URL}/#business`,
                 "url": SITE_URL,
                 "telephone": CONTACT_PHONE_RAW,
+                "priceRange": "$$",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": SITE_ADDRESS.street,
@@ -147,7 +225,11 @@ export default function RootLayout({
                   "addressRegion": SITE_ADDRESS.region,
                   "postalCode": SITE_ADDRESS.postalCode,
                   "addressCountry": SITE_ADDRESS.country
-                }
+                },
+                "sameAs": [
+                  "https://facebook.com",
+                  "https://instagram.com"
+                ]
               },
               {
                 "@context": "https://schema.org",
@@ -164,6 +246,76 @@ export default function RootLayout({
                     "position": 2,
                     "name": "Servicios",
                     "item": `${SITE_URL}/#servicios`
+                  }
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "¿En qué consiste el servicio de cremación individual?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Es un proceso exclusivo y garantizado para una sola persona, asegurando total transparencia y la entrega íntegra de las cenizas correspondientes."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Qué es un Jardín Memorial?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Es un cementerio parque natural diseñado como un espacio de paz y serenidad para el descanso y el homenaje a los seres queridos."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Ofrecen servicios de velatorio las 24 horas?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Sí, disponemos de salas de velatorio y atención de guardia permanente las 24 horas, los 365 días del año."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Qué trámites legales debo realizar?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Nos encargamos de toda la gestión administrativa y los trámites legales necesarios ante el Registro Civil y las autoridades correspondientes."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Tienen opciones de urnas ecológicas?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Sí, contamos con urnas biodegradables diseñadas para integrarse de forma natural en nuestro jardín memorial."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Cuál es el precio de una cremación y qué incluye?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "El costo varía según el servicio requerido. Incluye la cremación individual, la urna básica y el asesoramiento administrativo. Contáctenos para un presupuesto detallado."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Ofrecen servicio de cremación inmediato ante una urgencia?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Sí, coordinamos el traslado y el servicio de cremación de forma inmediata en cualquier momento del día o la noche."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "¿Dónde realizar una cremación segura en Paso de los Libres?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "En nuestras instalaciones propias y habilitadas ubicadas sobre la Ruta Nacional 14, Paso de los Libres, Corrientes."
+                    }
                   }
                 ]
               }
