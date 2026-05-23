@@ -1,4 +1,4 @@
-export const SITE_URL = "https://loslapachosdemo.vercel.app";
+export const SITE_URL = "https://www.loslapachoscrematorio.com";
 export const SITE_NAME = "Los Lapachos";
 export const SITE_DESCRIPTION = "Crematorio y servicios funerarios en Paso de los Libres, Corrientes. Memoria, respeto y calidez en servicios de cremación, velatorios y jardín memorial. Atención 24hs.";
 export const CONTACT_PHONE = "+54 3772 63-2717";
