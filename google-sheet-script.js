@@ -19,14 +19,17 @@
  * ¡Listo! Toda persona que complete el formulario en tu web quedará registrada en esta hoja de cálculo.
  */
 
+var SPREADSHEET_ID = "1_tqx_4duKbqfgaS7lxkj5bVYoBddNNsz5vAESG6ktf4";
+var SHEET_NAME = "Solicitudes";
+
 function doPost(e) {
   try {
     // Obtenemos los datos enviados desde la web
     var postData = JSON.parse(e.postData.contents);
     
     // Obtenemos la hoja "Solicitudes" o la creamos si todavia no existe
-    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
-    var sheet = spreadsheet.getSheetByName("Solicitudes") || spreadsheet.insertSheet("Solicitudes");
+    var spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
+    var sheet = spreadsheet.getSheetByName(SHEET_NAME) || spreadsheet.insertSheet(SHEET_NAME);
     
     // Si la hoja está completamente vacía, creamos los encabezados
     if (sheet.getLastRow() === 0) {

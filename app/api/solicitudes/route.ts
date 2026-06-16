@@ -38,9 +38,25 @@ export async function POST(request: Request) {
     }),
   })
 
+  const resultText = await response.text()
+  let result: { status?: string; message?: string } = {}
+
+  try {
+    result = JSON.parse(resultText)
+  } catch {
+    result = {}
+  }
+
   if (!response.ok) {
     return NextResponse.json(
       { error: "No se pudo registrar la solicitud." },
+      { status: 502 },
+    )
+  }
+
+  if (result.status === "error") {
+    return NextResponse.json(
+      { error: result.message || "Google Sheets rechazo la solicitud." },
       { status: 502 },
     )
   }
