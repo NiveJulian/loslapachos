@@ -22,10 +22,29 @@
 var SPREADSHEET_ID = "1_tqx_4duKbqfgaS7lxkj5bVYoBddNNsz5vAESG6ktf4";
 var SHEET_NAME = "Solicitudes";
 
+function firstValue() {
+  for (var i = 0; i < arguments.length; i++) {
+    if (arguments[i] !== undefined && arguments[i] !== null && String(arguments[i]).trim() !== "") {
+      return arguments[i];
+    }
+  }
+
+  return "";
+}
+
 function doPost(e) {
   try {
     // Obtenemos los datos enviados desde la web
     var postData = JSON.parse(e.postData.contents);
+    var nombre = firstValue(postData.nombre, postData.fullName, postData.name);
+    var dni = firstValue(postData.dni, postData.documento, postData.document);
+    var direccion = firstValue(postData.direccion, postData.address);
+    var telefono = firstValue(postData.telefono, postData.phone);
+
+    if (!direccion && dni && !/^[0-9.\s-]+$/.test(String(dni))) {
+      direccion = dni;
+      dni = "";
+    }
     
     // Obtenemos la hoja "Solicitudes" o la creamos si todavia no existe
     var spreadsheet = SpreadsheetApp.openById(SPREADSHEET_ID);
@@ -39,10 +58,10 @@ function doPost(e) {
     // Agregamos la nueva fila con la información del formulario
     sheet.appendRow([
       postData.fecha || new Date().toLocaleString("es-AR"),
-      postData.nombre,
-      postData.dni,
-      postData.direccion,
-      postData.telefono
+      nombre,
+      dni,
+      direccion,
+      telefono
     ]);
     
     // Retornamos respuesta exitosa

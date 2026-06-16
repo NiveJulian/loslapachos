@@ -3,9 +3,14 @@ import { NextResponse } from "next/server"
 type SolicitudPayload = {
   fecha?: string
   nombre?: string
+  fullName?: string
   dni?: string
+  documento?: string
+  document?: string
   direccion?: string
+  address?: string
   telefono?: string
+  phone?: string
 }
 
 export async function POST(request: Request) {
@@ -19,8 +24,20 @@ export async function POST(request: Request) {
   }
 
   const payload = (await request.json()) as SolicitudPayload
+  const solicitud = {
+    fecha: payload.fecha || new Date().toLocaleString("es-AR"),
+    nombre: payload.nombre || payload.fullName || "",
+    dni: payload.dni || payload.documento || payload.document || "",
+    direccion: payload.direccion || payload.address || "",
+    telefono: payload.telefono || payload.phone || "",
+  }
 
-  if (!payload.nombre || !payload.dni || !payload.direccion || !payload.telefono) {
+  if (!solicitud.direccion && solicitud.dni && !/^[0-9.\s-]+$/.test(solicitud.dni)) {
+    solicitud.direccion = solicitud.dni
+    solicitud.dni = ""
+  }
+
+  if (!solicitud.nombre || !solicitud.dni || !solicitud.direccion || !solicitud.telefono) {
     return NextResponse.json(
       { error: "Faltan campos obligatorios." },
       { status: 400 },
@@ -32,10 +49,7 @@ export async function POST(request: Request) {
     headers: {
       "Content-Type": "text/plain;charset=utf-8",
     },
-    body: JSON.stringify({
-      ...payload,
-      fecha: payload.fecha || new Date().toLocaleString("es-AR"),
-    }),
+    body: JSON.stringify(solicitud),
   })
 
   const resultText = await response.text()
