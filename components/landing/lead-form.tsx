@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { useToast } from "@/hooks/use-toast"
-import { GOOGLE_SHEETS_SCRIPT_URL } from "@/lib/constants"
 
 export function LeadForm() {
   const { toast } = useToast()
@@ -26,7 +25,7 @@ export function LeadForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     if (!formData.fullName.trim() || !formData.dni.trim() || !formData.address.trim() || !formData.phone.trim()) {
       toast({
         title: "Campos incompletos",
@@ -39,26 +38,22 @@ export function LeadForm() {
     setLoading(true)
 
     try {
-      if (GOOGLE_SHEETS_SCRIPT_URL) {
-        const response = await fetch(GOOGLE_SHEETS_SCRIPT_URL, {
-          method: "POST",
-          mode: "no-cors", // Required for Google Apps Script Web Apps when not using CORS headers
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            fecha: new Date().toLocaleString("es-AR"),
-            nombre: formData.fullName,
-            dni: formData.dni,
-            direccion: formData.address,
-            telefono: formData.phone,
-          }),
-        })
-        
-      } else {
-        // Simulate a delay when no URL is configured
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-        console.warn("GOOGLE_SHEETS_SCRIPT_URL no está configurada en lib/constants.ts. Los datos se simularon correctamente.")
+      const response = await fetch("/api/solicitudes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          fecha: new Date().toLocaleString("es-AR"),
+          nombre: formData.fullName,
+          dni: formData.dni,
+          direccion: formData.address,
+          telefono: formData.phone,
+        }),
+      })
+
+      if (!response.ok) {
+        throw new Error("No se pudo registrar la solicitud.")
       }
 
       toast({
@@ -115,9 +110,9 @@ export function LeadForm() {
                 <p className="text-muted-foreground text-sm sm:text-base max-w-md mx-auto">
                   Hemos registrado sus datos correctamente. Nos comunicaremos con usted a la brevedad.
                 </p>
-                <Button 
-                  onClick={() => setSubmitted(false)} 
-                  variant="outline" 
+                <Button
+                  onClick={() => setSubmitted(false)}
+                  variant="outline"
                   className="mt-4 rounded-full px-6"
                 >
                   Enviar otro formulario

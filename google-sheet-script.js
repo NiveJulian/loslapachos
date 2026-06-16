@@ -14,7 +14,7 @@
  * 8. Haz clic en "Implementar".
  * 9. Google te pedirá autorizar accesos. Haz clic en "Autorizar acceso", selecciona tu cuenta, ve a "Avanzado" (abajo) e "Ir a proyecto sin título (no seguro)" para confirmar los permisos de escritura en tu hoja de cálculo.
  * 10. Copia la "URL de la aplicación web" que te proporciona (termina en `/exec`).
- * 11. Pega esta URL en el archivo `lib/constants.ts` en la variable `GOOGLE_SHEETS_SCRIPT_URL`.
+ * 11. Pega esta URL en el archivo `.env` en la variable `GOOGLE_SHEETS_SCRIPT_URL`.
  * 
  * ¡Listo! Toda persona que complete el formulario en tu web quedará registrada en esta hoja de cálculo.
  */
@@ -24,8 +24,9 @@ function doPost(e) {
     // Obtenemos los datos enviados desde la web
     var postData = JSON.parse(e.postData.contents);
     
-    // Obtenemos la hoja activa de Google Sheets
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    // Obtenemos la hoja "Solicitudes" o la creamos si todavia no existe
+    var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();
+    var sheet = spreadsheet.getSheetByName("Solicitudes") || spreadsheet.insertSheet("Solicitudes");
     
     // Si la hoja está completamente vacía, creamos los encabezados
     if (sheet.getLastRow() === 0) {
