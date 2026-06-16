@@ -15,3 +15,8 @@ export const SITE_ADDRESS = {
   postalCode: "3230",
   country: "AR",
 };
+
+// URL de la Web App de Google Apps Script para guardar los datos en Google Sheets.
+// Deja vacío ("") para simular envíos locales o ingresa la URL provista por Google al publicar el script.
+export const GOOGLE_SHEETS_SCRIPT_URL = "";
+

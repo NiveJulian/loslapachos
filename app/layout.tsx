@@ -3,6 +3,7 @@ import { Playfair_Display, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, CONTACT_PHONE_RAW, SITE_ADDRESS, SITE_COORDINATES } from "@/lib/constants";
+import { Toaster } from "@/components/ui/toaster";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -326,6 +327,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Toaster />
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
