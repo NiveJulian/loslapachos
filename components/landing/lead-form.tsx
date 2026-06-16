@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { User, MapPin, Phone, Send, Loader2, CheckCircle2 } from "lucide-react"
+import { User, MapPin, Phone, Send, Loader2, CheckCircle2, FileText } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -15,6 +15,7 @@ export function LeadForm() {
   const [submitted, setSubmitted] = useState(false)
   const [formData, setFormData] = useState({
     fullName: "",
+    dni: "",
     address: "",
     phone: "",
   })
@@ -26,7 +27,7 @@ export function LeadForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    if (!formData.fullName.trim() || !formData.address.trim() || !formData.phone.trim()) {
+    if (!formData.fullName.trim() || !formData.dni.trim() || !formData.address.trim() || !formData.phone.trim()) {
       toast({
         title: "Campos incompletos",
         description: "Por favor, completa todos los campos del formulario.",
@@ -50,6 +51,7 @@ export function LeadForm() {
           body: JSON.stringify({
             fecha: new Date().toLocaleString("es-AR"),
             nombre: formData.fullName,
+            dni: formData.dni,
             direccion: formData.address,
             telefono: formData.phone,
           }),
@@ -67,7 +69,7 @@ export function LeadForm() {
         description: "La información se ha registrado correctamente.",
       })
       setSubmitted(true)
-      setFormData({ fullName: "", address: "", phone: "" })
+      setFormData({ fullName: "", dni: "", address: "", phone: "" })
     } catch (error) {
       console.error("Error al enviar el formulario:", error)
       toast({
@@ -138,6 +140,22 @@ export function LeadForm() {
                     placeholder="Ej. Juan Pérez"
                     value={formData.fullName}
                     onChange={(e) => handleChange("fullName", e.target.value)}
+                    className="bg-background border-border text-sm sm:text-base py-5 px-4 rounded-lg focus-visible:ring-accent"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="dni" className="flex items-center gap-2 text-foreground text-sm font-medium">
+                    <FileText className="h-4 w-4 text-accent" aria-hidden="true" />
+                    DNI
+                  </Label>
+                  <Input
+                    id="dni"
+                    type="text"
+                    required
+                    placeholder="Ej. 12345678"
+                    value={formData.dni}
+                    onChange={(e) => handleChange("dni", e.target.value)}
                     className="bg-background border-border text-sm sm:text-base py-5 px-4 rounded-lg focus-visible:ring-accent"
                   />
                 </div>

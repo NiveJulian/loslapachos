@@ -8,12 +8,13 @@ import { Button } from "@/components/ui/button"
 import { AnimatedLogo } from "./animated-logo"
 
 const navigation = [
-  { name: "Inicio", href: "#inicio" },
-  { name: "Nuestros Servicios", href: "#servicios" },
-  { name: "Sobre Nosotros", href: "#nosotros" },
-  { name: "Blog", href: "#blog" },
-  { name: "Dónde Estamos", href: "#ubicacion" },
-  { name: "Contactar Ahora", href: "#contacto" },
+  { name: "Inicio", href: "/#inicio" },
+  { name: "Nuestros Servicios", href: "/#servicios" },
+  { name: "Sobre Nosotros", href: "/#nosotros" },
+  { name: "Blog", href: "/#blog" },
+  { name: "Dónde Estamos", href: "/#ubicacion" },
+  { name: "Afiliación", href: "/afiliacion" },
+  { name: "Contactar Ahora", href: "/#contacto" },
 ]
 
 export function Header() {

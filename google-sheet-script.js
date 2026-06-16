@@ -29,13 +29,14 @@ function doPost(e) {
     
     // Si la hoja está completamente vacía, creamos los encabezados
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["Fecha y Hora", "Nombre Completo", "Dirección", "Teléfono"]);
+      sheet.appendRow(["Fecha y Hora", "Nombre Completo", "DNI", "Dirección", "Teléfono"]);
     }
     
     // Agregamos la nueva fila con la información del formulario
     sheet.appendRow([
       postData.fecha || new Date().toLocaleString("es-AR"),
       postData.nombre,
+      postData.dni,
       postData.direccion,
       postData.telefono
     ]);
