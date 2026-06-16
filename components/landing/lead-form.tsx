@@ -39,9 +39,7 @@ export function LeadForm() {
     setLoading(true)
 
     try {
-      // If the user has configured the Google Sheet URL, send the data
       if (GOOGLE_SHEETS_SCRIPT_URL) {
-        // We send a POST request with the form data as JSON or URL encoded
         const response = await fetch(GOOGLE_SHEETS_SCRIPT_URL, {
           method: "POST",
           mode: "no-cors", // Required for Google Apps Script Web Apps when not using CORS headers
@@ -57,7 +55,6 @@ export function LeadForm() {
           }),
         })
         
-        // Note: with "no-cors", response.ok is false and status is 0, but the data is sent successfully.
       } else {
         // Simulate a delay when no URL is configured
         await new Promise((resolve) => setTimeout(resolve, 1000))
