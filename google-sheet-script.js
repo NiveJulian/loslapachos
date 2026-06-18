@@ -38,6 +38,7 @@ function doPost(e) {
     var postData = JSON.parse(e.postData.contents);
     var nombre = firstValue(postData.nombre, postData.fullName, postData.name);
     var dni = firstValue(postData.dni, postData.documento, postData.document);
+    var email = firstValue(postData.email, "");
     var direccion = firstValue(postData.direccion, postData.address);
     var telefono = firstValue(postData.telefono, postData.phone);
 
@@ -52,7 +53,7 @@ function doPost(e) {
     
     // Si la hoja está completamente vacía, creamos los encabezados
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["Fecha y Hora", "Nombre Completo", "DNI", "Dirección", "Teléfono"]);
+      sheet.appendRow(["Fecha y Hora", "Nombre Completo", "DNI", "Correo Electrónico", "Dirección", "Teléfono"]);
     }
     
     // Agregamos la nueva fila con la información del formulario
@@ -60,6 +61,7 @@ function doPost(e) {
       postData.fecha || new Date().toLocaleString("es-AR"),
       nombre,
       dni,
+      email,
       direccion,
       telefono
     ]);

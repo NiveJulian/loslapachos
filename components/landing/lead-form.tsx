@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { User, MapPin, Phone, Send, Loader2, CheckCircle2, FileText } from "lucide-react"
+import { User, MapPin, Phone, Send, Loader2, CheckCircle2, FileText, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -15,6 +15,7 @@ export function LeadForm() {
   const [formData, setFormData] = useState({
     fullName: "",
     dni: "",
+    email: "",
     address: "",
     phone: "",
   })
@@ -26,7 +27,7 @@ export function LeadForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
-    if (!formData.fullName.trim() || !formData.dni.trim() || !formData.address.trim() || !formData.phone.trim()) {
+    if (!formData.fullName.trim() || !formData.dni.trim() || !formData.email.trim() || !formData.address.trim() || !formData.phone.trim()) {
       toast({
         title: "Campos incompletos",
         description: "Por favor, completa todos los campos del formulario.",
@@ -47,6 +48,7 @@ export function LeadForm() {
           fecha: new Date().toLocaleString("es-AR"),
           nombre: formData.fullName,
           dni: formData.dni,
+          email: formData.email,
           direccion: formData.address,
           telefono: formData.phone,
         }),
@@ -61,7 +63,7 @@ export function LeadForm() {
         description: "La información se ha registrado correctamente.",
       })
       setSubmitted(true)
-      setFormData({ fullName: "", dni: "", address: "", phone: "" })
+      setFormData({ fullName: "", dni: "", email: "", address: "", phone: "" })
     } catch (error) {
       console.error("Error al enviar el formulario:", error)
       toast({
@@ -148,6 +150,22 @@ export function LeadForm() {
                     placeholder="Ej. 12345678"
                     value={formData.dni}
                     onChange={(e) => handleChange("dni", e.target.value)}
+                    className="bg-background border-border text-sm sm:text-base py-5 px-4 rounded-lg focus-visible:ring-accent"
+                  />
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="email" className="flex items-center gap-2 text-foreground text-sm font-medium">
+                    <Mail className="h-4 w-4 text-accent" aria-hidden="true" />
+                    Correo Electrónico
+                  </Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    placeholder="Ej. juan.perez@example.com"
+                    value={formData.email}
+                    onChange={(e) => handleChange("email", e.target.value)}
                     className="bg-background border-border text-sm sm:text-base py-5 px-4 rounded-lg focus-visible:ring-accent"
                   />
                 </div>

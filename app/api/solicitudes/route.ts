@@ -7,6 +7,7 @@ type SolicitudPayload = {
   dni?: string
   documento?: string
   document?: string
+  email?: string
   direccion?: string
   address?: string
   telefono?: string
@@ -28,6 +29,7 @@ export async function POST(request: Request) {
     fecha: payload.fecha || new Date().toLocaleString("es-AR"),
     nombre: payload.nombre || payload.fullName || "",
     dni: payload.dni || payload.documento || payload.document || "",
+    email: payload.email || "",
     direccion: payload.direccion || payload.address || "",
     telefono: payload.telefono || payload.phone || "",
   }
@@ -37,7 +39,7 @@ export async function POST(request: Request) {
     solicitud.dni = ""
   }
 
-  if (!solicitud.nombre || !solicitud.dni || !solicitud.direccion || !solicitud.telefono) {
+  if (!solicitud.nombre || !solicitud.dni || !solicitud.email || !solicitud.direccion || !solicitud.telefono) {
     return NextResponse.json(
       { error: "Faltan campos obligatorios." },
       { status: 400 },
